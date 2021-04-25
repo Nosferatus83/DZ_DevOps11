@@ -1,9 +1,9 @@
 pipeline {
     agent {
-        docker {
-            image '35.246.227.35:8123/repository/mydockerreppo/build:latest'
-            registryUrl 'http://35.246.227.35:8123/repository/mydockerreppo'
-            registryCredentialsId 'f09f2782-f186-496c-a42c-83b953e6c971'
+        dockerfile{
+            filename 'Dockerfile.build'
+            dir 'Build'
+            label 'Docker BUILDER'
             args '-v ./war/:/usr/local/samplejavacode/target/'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
