@@ -1,6 +1,6 @@
 pipeline {
-    agent {
-        dockerfile {
+        agent {
+        dockerfile true {
             filename 'Dockerfile.build'
             dir 'Build'
             label 'Docker BUILDER'
