@@ -20,8 +20,8 @@ pipeline {
             image 'nosferatus83/build:latest'
 //            registryUrl 'https://hub.docker.com/r/nosferatus83/build'
             registryCredentialsId '0423836f-27d7-48c6-b5fe-59511220d527'
-            args '-v ./war/:/usr/local/samplejavacode/target/'
-            args '-v /var/run/docker.sock:/var/run/docker.sock -u 0:0'
+            args '--privileged -v ./war/:/usr/local/samplejavacode/target/'
+            args '--privileged -v /var/run/docker.sock:/var/run/docker.sock -u 0:0'
         }
 
     }
