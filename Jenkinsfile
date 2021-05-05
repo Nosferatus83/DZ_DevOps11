@@ -11,7 +11,7 @@ pipeline {
         docker {
             image '34.89.204.88:8123/repository/mydockerreppo/build:latest'
             registryUrl 'http://34.89.204.88:8123/repository/mydockerreppo'
-            registryCredentialsId 'f09f2782-f186-496c-a42c-83b953e6c971'
+            registryCredentialsId '23887642-4a26-41bd-b4f5-8860145c627f'
             args '-v ./war/:/usr/local/samplejavacode/target/'
             args '-v /var/run/docker.sock:/var/run/docker.sock -u 0:0'
         }
