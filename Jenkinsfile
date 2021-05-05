@@ -22,12 +22,12 @@ pipeline {
         stage ('CREATE docker image') {
             steps {
                 sh 'docker build -t DZ_DevOps11 .'
-                sh 'docker tag DZ_DevOps11  35.246.227.35:8123/repository/mydockerreppo/DZ_DevOps11:latest  && docker push  35.246.227.35:8123/repository/mydockerreppo/DZ_DevOps11:latest'
+                sh 'docker tag DZ_DevOps11  34.89.204.88:8123/repository/mydockerreppo/DZ_DevOps11:latest  && docker push  34.89.204.88:8123/repository/mydockerreppo/DZ_DevOps11:latest'
             }
         }
         stage ('DEPLOY docker') {
             steps {
-                sh 'docker run -d  -p 8088:8080 35.246.227.35:8123/repository/mydockerreppo/DZ_DevOps11:latest'
+                sh 'docker run -d  -p 8088:8080 34.89.204.88:8123/repository/mydockerreppo/DZ_DevOps11:latest'
             }
         }
     }
