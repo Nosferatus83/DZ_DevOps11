@@ -38,15 +38,15 @@ pipeline {
         }
         stage ('CREATE docker image') {
             steps {
-                sh 'docker build -t DZ_DevOps11 .'
-//                sh 'docker tag DZ_DevOps11  34.89.204.88:8123/repository/mydockerreppo/DZ_DevOps11:latest  && docker push  34.89.204.88:8123/repository/mydockerreppo/DZ_DevOps11:latest'
-                sh 'docker tag DZ_DevOps11  nosferatus83/DZ_DevOps11:latest  && docker push  nosferatus83/DZ_DevOps11:latest'
+                sh 'docker build -t dz_devops11 .'
+//                sh 'docker tag dz_devops11  34.89.204.88:8123/repository/mydockerreppo/dz_devops11:latest  && docker push  34.89.204.88:8123/repository/mydockerreppo/dz_devops11:latest'
+                sh 'docker tag dz_devops11  nosferatus83/dz_devops11:latest  && docker push  nosferatus83/dz_devops11:latest'
             }
         }
         stage ('DEPLOY docker') {
             steps {
-//                sh 'docker run -d  -p 8088:8080 34.89.204.88:8123/repository/mydockerreppo/DZ_DevOps11:latest'
-                sh 'docker run -d  -p 8088:8080 nosferatus83/DZ_DevOps11:latest'
+//                sh 'docker run -d  -p 8088:8080 34.89.204.88:8123/repository/mydockerreppo/dz_devops11:latest'
+                sh 'docker run -d  -p 8088:8080 nosferatus83/dz_devops11:latest'
             }
         }
     }
