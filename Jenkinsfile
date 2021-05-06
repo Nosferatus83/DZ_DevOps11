@@ -51,7 +51,7 @@ pipeline {
                     sh '''ssh -o StrictHostKeyChecking=no root@34.107.121.180 << EOF
                     docker pull nosferatus83/dz_devops11:latest
                     docker run -d  -p 8088:8080 nosferatus83/dz_devops11:latest
-                    EOF'''
+EOF'''
                 }
             }
         }
