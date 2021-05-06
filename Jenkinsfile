@@ -50,7 +50,7 @@ pipeline {
                 sshagent(['57630d1a-7062-4b20-ae7a-8d6452cfbbe9']) {
                     sh '''ssh -o StrictHostKeyChecking=no root@34.107.121.180 << EOF
                     docker pull nosferatus83/dz_devops11:latest
-                    docker run --rm --name dz_devops11 -d  -p 8088:8080 nosferatus83/dz_devops11:latest
+                    docker run --rm -d -p 8088:8080 nosferatus83/dz_devops11:latest
 EOF'''
                 }
             }
